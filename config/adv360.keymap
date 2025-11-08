@@ -21,6 +21,22 @@
         };
     };
 
+    macros {
+        HELLO: HELLO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "HELLO";
+        };
+
+        INC_MANAGE: INC_MANAGE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp PIPE &kp PIPE &kp SPACE &kp LS(I) &kp LS(N) &kp LS(C) &kp LS(I) &kp LS(D) &kp LS(E) &kp LS(N) &kp LS(T) &kp SPACE &kp LS(M) &kp LS(A) &kp LS(N) &kp LS(A) &kp LS(G) &kp LS(E) &kp LS(M) &kp LS(E) &kp LS(N) &kp LS(T) &kp SPACE &kp PIPE &kp PIPE &kp RET &kp RET &kp PIPE &kp PIPE &kp LS(S) &kp C &kp I &kp E &kp N &kp C &kp E &kp SPACE &kp LS(L) &kp O &kp G &kp I &kp C &kp PIPE &kp PIPE &kp RET &kp LS(S) &kp LS(L) &kp N1 &kp SPACE &kp I &kp S &kp SPACE &kp I &kp N &kp D &kp I &kp C &kp A &kp T &kp I &kp N &kp G &kp SPACE &kp T &kp H &kp A &kp T &kp SPACE &kp T &kp H &kp E &kp SPACE &kp A &kp L &kp E &kp R &kp T &kp SPACE &kp RET &kp RET &kp RET &kp PIPE &kp PIPE &kp SPACE &kp LS(T) &kp LS(R) &kp LS(O) &kp LS(U) &kp LS(B) &kp LS(L) &kp LS(E) &kp LS(S) &kp LS(H) &kp LS(O) &kp LS(O) &kp LS(T) &kp LS(I) &kp LS(N) &kp LS(G) &kp SPACE &kp PIPE &kp PIPE &kp RET &kp RET &kp RET &kp PIPE &kp PIPE &kp LS(R) &kp U &kp N &kp LS(B) &kp O &kp O &kp K &kp PIPE &kp PIPE &kp RET>;
+            label = "INC_MANAGE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,11 +65,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                           &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &HELLO                                           &none   &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &INC_MANAGE  &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans          &trans       &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
             >;
         };
 
