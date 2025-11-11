@@ -25,14 +25,15 @@
         HELLO: HELLO {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_CONTROL &kp RIGHT_SHIFT &kp EXCLAMATION>;
+            bindings = <&kp RIGHT_CONTROL &kp EXCL>;
             label = "HELLO";
         };
 
         INC_MGMT: INC_MGMT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_CONTROL &kp RIGHT_SHIFT &kp AT_SIGN>;
+            bindings = <&kp RIGHT_CONTROL &kp AT>, <&macro_press>;
+
             label = "INC_MGMT";
         };
 
