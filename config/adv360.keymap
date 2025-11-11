@@ -25,36 +25,28 @@
         HELLO: HELLO {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_CONTROL &kp RIGHT_SHIFT &kp EXCL>,
-                <&macro_release>;
-
+            bindings = <&kp RC(EXCL)>;
             label = "HELLO";
         };
 
         INC_MGMT: INC_MGMT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_CONTROL &kp RIGHT_SHIFT &kp N2>,
-                <&macro_release>;
-
+            bindings = <&kp RC(AT)>;
             label = "INC_MGMT";
         };
 
         HTML: HTML {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_CONTROL &kp RIGHT_SHIFT &kp HASH>;
+            bindings = <&kp RC(HASH)>;
             label = "HTML";
         };
 
         RESOLVE: RESOLVE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp RIGHT_SHIFT &kp DOLLAR>;
+            bindings = <&kp RC(DLLR)>;
             label = "RESOLVE";
         };
     };
